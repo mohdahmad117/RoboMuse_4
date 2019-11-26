@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="use_map_topic" default="true"/>
+  <arg name="scan_topic" default="scan"/>
+
+  <node pkg="amcl" type="amcl" name="amcl" clear_params="true">
+    <rosparam file="$(find robomuse_drivers)/param/amcl.yaml" ns="amcl" />
+  </node>
+</launch>
